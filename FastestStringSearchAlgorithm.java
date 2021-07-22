@@ -5,7 +5,6 @@ public class FastestStringSearchAlgorithm
 		Console c = new Console();
 		c.createAndShowConsole();
 
-
 		TextSearch bruteForce = new BruteForce();
 		TextSearch bayerMoore = new BayerMoore();
 		TextSearch rabinKarp = new RabinKarp();
