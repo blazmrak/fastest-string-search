@@ -52,7 +52,8 @@ class Algo
 		this.numTimesCameFastest++;
 	}
 
-	public String time() {
+	public String time()
+	{
 		return ((float) this.timeTaken) / 1000000000 + "s";
 	}
 }
@@ -65,21 +66,25 @@ public class TestBed
 
 	Random random = new Random();
 
-	int maxPatternLen;
-	int totalNumberOfRuns;
-	int numberOfRunsPerSearch;
+	private final int maxPatternLen;
+	private final int totalNumberOfRuns;
+	private final int numberOfRunsPerSearch;
+	private final boolean printResultsAfterRun;
+
 
 	List<Algo> algorithms;
 
 	public TestBed(
 			int maxPatternLen,
 			int totalNumberOfRuns,
-			int numberOfRunsPerSearch
+			int numberOfRunsPerSearch,
+			boolean printResultsAfterRun
 	)
 	{
 		this.maxPatternLen = maxPatternLen;
 		this.totalNumberOfRuns = totalNumberOfRuns;
 		this.numberOfRunsPerSearch = numberOfRunsPerSearch;
+		this.printResultsAfterRun = printResultsAfterRun;
 	}
 
 	public TestBed withAlgorithms(TextSearch... textSearch)
@@ -122,8 +127,8 @@ public class TestBed
 			String pattern = getPattern(indexIntoTextArray, patternLen);
 
 			char[] cpattern = pattern.toCharArray();
-			if(random.nextInt(100) > 90) {
-				System.out.println("===================== Invalid =====================");
+			if (random.nextInt(100) > 90)
+			{
 				cpattern[random.nextInt(patternLen)]++;
 			}
 
@@ -172,6 +177,11 @@ public class TestBed
 			Algo fastest
 	)
 	{
+		if (!printResultsAfterRun)
+		{
+			return;
+		}
+
 		System.out.println();
 		System.out.println(
 				"===================== Run Number: " + (run + 1) + "/" + totalNumberOfRuns +

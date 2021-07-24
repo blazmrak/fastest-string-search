@@ -11,17 +11,19 @@ public class FastestStringSearchAlgorithm
 		TextSearch knuthMorrisPratt = new KnuthMorrisPratt();
 		TextSearch choudhary = new Choudhary();
 		TextSearch my = new MyTextSearch();
+		TextSearch updatedChoudhary = new UpdatedChoudhary();
 
-		for (int i = 1; i < 2; i++)
+		for (int i = 1; i < 100; i++)
 		{
-			new TestBed(i * 1024, 1000, 100)
+			new TestBed(i, 100, 100, false)
 					.withAlgorithms(
 							bruteForce,
 							bayerMoore,
 							rabinKarp,
 							knuthMorrisPratt,
 							choudhary,
-							my
+							my,
+							updatedChoudhary
 					)
 					.run();
 		}
