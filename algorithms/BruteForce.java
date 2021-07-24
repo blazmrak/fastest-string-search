@@ -1,3 +1,7 @@
+package algorithms;
+
+import testbed.TextSearch;
+
 public class BruteForce implements TextSearch
 {
 	@Override

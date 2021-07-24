@@ -1,3 +1,8 @@
+import algorithms.*;
+import console.Console;
+import testbed.TestBed;
+import testbed.TextSearch;
+
 public class FastestStringSearchAlgorithm
 {
 	public static void main(String[] args)

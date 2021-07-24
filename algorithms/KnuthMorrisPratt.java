@@ -1,4 +1,9 @@
-public class KnuthMorrisPratt implements TextSearch {
+package algorithms;
+
+import testbed.TextSearch;
+
+public class KnuthMorrisPratt implements TextSearch
+{
 	@Override
 	public int search(
 			char[] text,

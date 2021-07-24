@@ -1,3 +1,7 @@
+package algorithms;
+
+import testbed.TextSearch;
+
 import java.math.BigInteger;
 import java.util.Random;
 

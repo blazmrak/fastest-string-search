@@ -1,3 +1,5 @@
+package testbed;
+
 public interface TextSearch
 {
 	int search(

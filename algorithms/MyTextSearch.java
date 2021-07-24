@@ -1,3 +1,7 @@
+package algorithms;
+
+import testbed.TextSearch;
+
 import java.util.Arrays;
 
 public class MyTextSearch implements TextSearch

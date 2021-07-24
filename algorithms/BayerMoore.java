@@ -1,3 +1,7 @@
+package algorithms;
+
+import testbed.TextSearch;
+
 public class BayerMoore implements TextSearch
 {
 	int ASIZE = 256;
@@ -54,7 +58,7 @@ public class BayerMoore implements TextSearch
 	)
 	{
 
-		int i = 0;
+		int i;
 
 		for (i = 0; i < ASIZE; ++i)
 		{

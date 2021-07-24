@@ -1,3 +1,5 @@
+package console;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -299,9 +301,9 @@ public class Console implements KeyListener, ActionListener
 
 	} // end of configureJTextAreaForInputOutput
 
-	void createAndShowConsole()
+	public void createAndShowConsole()
 	{
-		title = "Console";
+		title = "console.Console";
 		jf = InitComponents.setupJFrameAndGet(
 				title,
 				(3 * screenWidth) / 4,
@@ -348,7 +350,7 @@ public class Console implements KeyListener, ActionListener
 		jf.setVisible(true);
 	} // end of createAndShowConsole
 
-} // end of Console
+} // end of console.Console
 
 class InitComponents
 {
@@ -423,4 +425,4 @@ class InitComponents
 		return tmpJMI;
 	} // end of setupJMenuItemAndGet
 
-}// end of InitComponents
+}// end of console.InitComponents

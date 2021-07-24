@@ -1,3 +1,7 @@
+package algorithms;
+
+import testbed.TextSearch;
+
 public class UpdatedChoudhary implements TextSearch
 {
 	private int ASIZE = 256;
@@ -8,10 +12,10 @@ public class UpdatedChoudhary implements TextSearch
 			char[] pattern
 	)
 	{
-		int i = 0;
-		int index = 0;
-		int end_index = 0;
-		boolean not_found = false;
+		int i;
+		int index;
+		int end_index;
+		boolean not_found;
 
 		int text_len = text.length;
 		int pattern_len = pattern.length;
@@ -40,9 +44,9 @@ public class UpdatedChoudhary implements TextSearch
 
 			if (pattern[pi_44] != text[i + pi_44])
 			{
-				if (skip_table[(int) (text[i + pi_44])] > 0)
+				if (skip_table[text[i + pi_44]] > 0)
 				{
-					i = i + skip_table[(int) (text[i + pi_44])] - 1;
+					i = i + skip_table[text[i + pi_44]] - 1;
 				}
 				continue;
 			}
@@ -79,7 +83,7 @@ public class UpdatedChoudhary implements TextSearch
 				}
 			} // end of inner for loop
 
-			if (not_found == false)
+			if (!not_found)
 			{ // match is found
 				return i;
 			}
@@ -93,6 +97,6 @@ public class UpdatedChoudhary implements TextSearch
 	@Override
 	public String name()
 	{
-		return "Updated Choudhary";
+		return "Updated algorithms.Choudhary";
 	}
 }
